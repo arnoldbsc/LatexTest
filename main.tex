@@ -1,0 +1,177 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{longtable}
+\usepackage[refpages]{gloss}
+\usepackage{float}
+\usepackage{anysize}
+\usepackage{bigstrut}
+\usepackage{appendix}
+\usepackage{lscape} 
+\usepackage{pdflscape}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{enumerate} 
+\usepackage{ragged2e}
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+\usepackage{pslatex}
+\usepackage{apacite} 
+\usepackage{fixltx2e}
+\usepackage{caption}
+\usepackage{setspace} 
+\captionsetup[table]{skip=10pt}
+\bibliographystyle{apacite}
+\begin{document}
+\renewcommand{\BOthers}[1]{et al.\hbox{}}
+\renewcommand\bibname{Bibliografía}
+%----------------------------------------------------------------------------------------
+%	CONFIGURACION
+%----------------------------------------------------------------------------------------
+\marginsize{3.0cm}{3.0cm}{3.0cm}{3.0cm}
+\renewcommand*{\contentsname}{Tabla de contenidos}
+\renewcommand*{\listtablename}{Índice de tablas}
+\renewcommand*{\listfigurename}{Índice de figuras}
+\renewcommand{\baselinestretch}{1.0}
+\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+\renewcommand*{\tablename}{Tabla}
+\renewcommand*{\chaptername}{Capítulo}
+\renewcommand*{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+
+%----------------------------------------------------------------------------------------
+%	Carátula
+%----------------------------------------------------------------------------------------
+\begin{titlepage}
+\begin{center}
+ {\Large \bf UNIVERSIDAD CATÓLICA DE SANTA MARÍA}\\
+  \vspace{8mm} 
+  {\Large \bf Facultad de Ciencias e Ingenieria Fisicas y Formales}\\
+  \vspace{8mm}
+  {\Large \bf Escuela Profesional de Ingeniería de Sistemas}\\
+ \begin{figure}[H]
+    \centering
+    \includegraphics[width=7cm]{imagenes/logo de la catolica.png}
+\end{figure}
+\title{MEJORA DEL PROCESO DE RESERVACIONES DE RUTAS TURÍSTICAS DE UNA HOTELERA MEDIANTE LA UTILIZACIÓN DE UN CHATBOT} % titulo de tu tesis para latex
+{\Large \bf }
+\vspace{1cm}
+{\bf DIANTE LA UTILIZACIÓN DE UN CHATBOT}\\[1.0cm]
+\begin{flushright}
+{\bf AUTOR}\\[0.5cm]
+{Huanca Paucar Renato Denilzón}\\[0.5cm] % nombres del autor o autores [1.0cm]
+{Sanchez Coila Arnold Bryan}\\[1.0cm]
+
+{\bf ASESOR(A)}\\[0.5 cm] 
+{Dra. Castro Gutierrrez Eveling Gloria}\\[0.5 cm] % nombre del asesor
+\end{flushright}
+\vspace{1cm}
+{Arequipa - Perú}\\[0.5cm]
+{2022}
+\end{center}
+\end{titlepage}
+
+\pagenumbering{roman}
+%----------------------------------------------------------------------------------------
+%	Resumen
+%----------------------------------------------------------------------------------------
+
+\chapter*{\centering \large Resumen} 
+\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
+\markboth{Resumen}{Resumen} % encabezado
+{Actualmente los sistemas de informaci ́on pueden brindar un gran apoyo en el proceso de la
+reserva tur ́ıstica en un entorno hotelero, sin embargo, solo teniendo dichos sistemas aun hace falta
+personal para que pueda atender dudas o inquietudes que sean muy espec ́ıficas por parte de los
+usuarios. Los sistemas de informaci ́on son las herramientas adecuadas para gestionar y brindar
+informaci ́on a los turistas, ya sean nacionales o internacionales, y as ́ı satisfacer sus necesidades. El
+turismo siempre ha sido una de las fuentes de ingresos m ́as importantes para un pa ́ıs o una ciudad,
+por eso es tan importante contar con una adecuada gesti ́on tur ́ıstica en nuestra ciudad, pues se
+espera que sea la satisfacci ́on de los turistas. El enfoque de este documento se basa en el aporte
+de una inteligencia artificial que se encargue del procesamiento del lenguaje natural para que este
+pueda interactuar con el usuario y lo apoye en todo el ciclo de realizaci ́on de la reserva tur ́ıstica
+en el hotel.}\\[0.5cm]
+
+
+%----------------------------------------------------------------------------------------
+%	Abstract
+%----------------------------------------------------------------------------------------
+
+\chapter*{\centering \large Abstract} 
+\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
+\markboth{Resumen}{Resumen} % encabezado
+{Abstract in english}\\[0.5cm]
+
+%----------------------------------------------------------------------------------------
+%	Introducción
+%----------------------------------------------------------------------------------------
+\chapter*{\centering \large Introducción} 
+\addcontentsline{toc}{chapter}{Resumen} % si queremos que aparezca en el índice
+\markboth{Resumen}{Resumen} % encabezado
+{Escribir resumen aquí}\\[0.5cm]
+%----------------------------------------------------------------------------------------
+
+%	TABLA DE CONTENIDOS
+%---------------------------------------------------------------------------------------
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\contentsname}
+\tableofcontents \newpage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures \newpage
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables \newpage
+\makegloss
+\newpage
+\pagenumbering{arabic}
+
+%----------------------------------------------------------------------------------------
+%	Capítulo 1
+%----------------------------------------------------------------------------------------
+\doublespacing
+\chapter{Título de capítulo 1}
+\section{Título de sección}
+\subsection{Título de subsección}
+\subsubsection{Título de subsubsección}
+\begin{spacing}{1.5}
+{Ejemplo de cuerpo y ejemplo de imagen en l \ref{fig:PLACEHOLDER}. }
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imagenes/640x360.png}
+    \caption{Ejemplo de imagen.}
+    \label{fig:PLACEHOLDER}
+\end{figure}
+
+\begin{equation} \label{eq:1}
+    S=\sum_iP_ilog(P_i)
+\end{equation}
+
+
+\end{spacing}
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+
+\bibliography{library}
+
+
+%----------------------------------------------------------------------------------------
+%	Anexos
+%----------------------------------------------------------------------------------------
+\appendix
+\renewcommand{\appendixname}{Anexo}%
+\chapter*{\appendixname}
+\phantomsection
+\end{document} 
