@@ -8,3 +8,6 @@
 *.gz
 *.toc
 *.lot
+*.idx
+*.ilg
+*.ind
